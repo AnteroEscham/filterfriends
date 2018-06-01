@@ -1,0 +1,19 @@
+.btn {
+        color: #fff;
+        background-color: $red;
+        border: none;
+        border-radius: 11px;
+        padding: rem(10px) rem(22px);
+        cursor: pointer;
+        font-size: 12px;
+        transition: 0.2s;
+
+        &:hover {
+                transform: scale(1.03);
+                background-color: darken($red, 10);
+        }
+        
+        &--open {
+                margin-top: 5%;
+        }
+}

@@ -1,0 +1,31 @@
+.search {
+        background-color: $grey;
+        padding: 2% 1.5%;;
+        display: flex;
+        justify-content: space-between;
+
+        &__input {
+                border: none;
+                border-radius: 30px;
+                width: 47%;
+                padding: 0.9% 0.9% 0.9% rem(25px);
+                font-size: rem(12px);
+                background: #fff url('../images/search.svg') rem(4px) center no-repeat;
+                background-size: 19px 13px;
+                outline-color: $red;
+                outline-radius: 30px;
+                -moz-outline-radius: 30px;
+
+                &::-webkit-input-placeholder {
+                        font-family: $font;
+                }
+
+                &:-moz-placeholder {
+                        font-family: $font;
+                }
+
+                &:-ms-input-placeholder {
+                        font-family: $font;
+                }
+        }
+}
