@@ -9,7 +9,7 @@ const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
 const dirAssets = path.join(__dirname, 'assets');
 
-const appHtmlTitle = 'Webpack Boilerplate';
+const appHtmlTitle = 'Filter Friends';
 
 /**
  * Webpack Configuration
@@ -34,7 +34,7 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'index.html'),
+            template: path.join(__dirname, 'index.hbs'),
             title: appHtmlTitle
         })
     ],
@@ -94,11 +94,10 @@ module.exports = {
                 }
             },
 
-            { 
-                
-            test: /\.handlebars$/, 
-            loader: "handlebars-loader"
-
+            {
+                test: /\.hbs/,
+                loader: 'handlebars-loader',
+                exclude: /(node_modules)/
             }
         ]
     }

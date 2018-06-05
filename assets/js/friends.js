@@ -1,8 +1,4 @@
-
-const source = document.getElementById('friends-list').innerHTML;
-let template = Handlebars.compile(source);
-
-
+import render from "../templates/friends.hbs";
 
 function getVkFriends (items) {
     
@@ -22,8 +18,7 @@ function getVkFriends (items) {
 
 
 function renderFriends(array, targetClass) {
-    const html = template(array);
-    document.querySelector(`.${targetClass}`).innerHTML = html;
+    document.querySelector(`.${targetClass}`).innerHTML = render({friends: array});
 }
 
 

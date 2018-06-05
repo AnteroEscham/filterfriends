@@ -43,8 +43,6 @@ openBtn.addEventListener('click', e => {
                     }
                 }
             })
-
-            console.log(filteredID);
         }
     })
 });
