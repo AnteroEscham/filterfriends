@@ -7,8 +7,8 @@ $grey-font: #4f4f4f;
 $font: 'Fira Sans', sans-serif;
 
 //config
-@import "config/base.scss";
 @import "config/mixins.scss";
+@import "config/base.scss";
 @import "config/normalize.scss";
 
 //layout

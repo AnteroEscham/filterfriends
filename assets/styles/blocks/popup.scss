@@ -8,6 +8,10 @@
         position: relative;
         // display: none;
 
+        @include md {
+                width: 100%;
+        }
+
         &__title {
                 background-color: $red;
                 color: #fff;

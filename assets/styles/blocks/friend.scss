@@ -69,6 +69,10 @@
                 @include circle(rem(45px), rem(45px));
                 background-color: $red;
                 margin-right: 3%;
+
+                @include xs {
+                        @include circle(rem(30px), rem(30px));  
+                }
         }
 
         &__name {
@@ -76,6 +80,7 @@
                 font-weight: 700;
                 color: $grey-font;
                 letter-spacing: 0.4pt;
+                padding-right: 30px;
         }
 
         &__plus {

@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
@@ -69,6 +70,8 @@ module.exports = {
                 test: /\.scss/,
                 use: [
                     'style-loader',
+
+                    
                     {
                         loader: 'css-loader',
                         options: {
@@ -76,12 +79,25 @@ module.exports = {
                         }
                     },
                     {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                autoprefixer({
+                                    browsers:['ie >= 11', 'last 2 version']
+                                })
+                            ],
+                            sourceMap: true
+                        }
+                    },
+
+                    {
                         loader: 'sass-loader',
                         options: {
                             sourceMap: IS_DEV,
                             includePaths: [dirAssets]
                         }
                     }
+
                 ]
             },
 

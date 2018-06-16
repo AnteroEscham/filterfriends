@@ -16,6 +16,10 @@
                 outline-radius: 30px;
                 -moz-outline-radius: 30px;
 
+                @include sm {
+                        background-size: 11px 13px;
+                }
+
                 &::-webkit-input-placeholder {
                         font-family: $font;
                 }
